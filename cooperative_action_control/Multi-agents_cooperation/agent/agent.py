@@ -17,6 +17,7 @@ from torch.distributions import Categorical
 import sys
 sys.path.append("..")
 from policy.vdn import VDN
+from policy.qmix import QMIX
 
 
 # Agent no communication
@@ -34,7 +35,6 @@ class Agents:
             from ..policy.iql import IQL
             self.policy = IQL(args)
         elif args.alg == 'qmix':
-            from ..policy.qmix import QMIX
             self.policy = QMIX(args)
         elif args.alg == 'coma':
             from ..policy.coma import COMA

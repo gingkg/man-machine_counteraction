@@ -80,6 +80,8 @@ class Runner:
         plt.figure()
         plt.ylim([0, 105])
         plt.cla()
+        # 调整子图上下边距
+        plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=0.5)
         plt.subplot(2, 1, 1)
         plt.plot(range(len(self.win_rates)), self.win_rates)
         plt.xlabel('step*{}'.format(self.args.evaluate_cycle))

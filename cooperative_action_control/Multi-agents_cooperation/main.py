@@ -8,7 +8,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 
 def main():
-    for i in range(8):
+    for i in range(3):
         args = get_common_args()
         if args.alg.find('coma') > -1:
             args = get_coma_args(args)
