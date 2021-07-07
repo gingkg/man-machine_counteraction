@@ -18,6 +18,7 @@ import sys
 sys.path.append("..")
 from policy.vdn import VDN
 from policy.qmix import QMIX
+from policy.iql import IQL
 
 
 # Agent no communication
@@ -32,7 +33,6 @@ class Agents:
             # from ..policy.vdn import VDN
             self.policy = VDN(args)
         elif args.alg == 'iql':
-            from ..policy.iql import IQL
             self.policy = IQL(args)
         elif args.alg == 'qmix':
             self.policy = QMIX(args)
