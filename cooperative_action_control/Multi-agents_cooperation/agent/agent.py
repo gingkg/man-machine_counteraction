@@ -19,6 +19,7 @@ sys.path.append("..")
 from policy.vdn import VDN
 from policy.qmix import QMIX
 from policy.iql import IQL
+from policy.coma import COMA
 
 
 # Agent no communication
@@ -37,7 +38,6 @@ class Agents:
         elif args.alg == 'qmix':
             self.policy = QMIX(args)
         elif args.alg == 'coma':
-            from ..policy.coma import COMA
             self.policy = COMA(args)
         elif args.alg == 'qtran_alt':
             from ..policy.qtran_alt import QtranAlt
