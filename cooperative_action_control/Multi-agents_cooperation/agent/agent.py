@@ -21,6 +21,7 @@ from policy.qmix import QMIX
 from policy.iql import IQL
 from policy.coma import COMA
 from policy.reinforce import Reinforce
+from policy.qtran_base import QtranBase
 
 
 # Agent no communication
@@ -44,7 +45,6 @@ class Agents:
             from ..policy.qtran_alt import QtranAlt
             self.policy = QtranAlt(args)
         elif args.alg == 'qtran_base':
-            from ..policy.qtran_base import QtranBase
             self.policy = QtranBase(args)
         elif args.alg == 'maven':
             from ..policy.maven import MAVEN
