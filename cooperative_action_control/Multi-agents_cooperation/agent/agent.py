@@ -20,6 +20,7 @@ from policy.vdn import VDN
 from policy.qmix import QMIX
 from policy.iql import IQL
 from policy.coma import COMA
+from policy.reinforce import Reinforce
 
 
 # Agent no communication
@@ -52,7 +53,6 @@ class Agents:
             from ..policy.central_v import CentralV
             self.policy = CentralV(args)
         elif args.alg == 'reinforce':
-            from ..policy.reinforce import Reinforce
             self.policy = Reinforce(args)
         else:
             raise Exception("No such algorithm")
