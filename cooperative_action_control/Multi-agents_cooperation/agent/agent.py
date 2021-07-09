@@ -23,6 +23,7 @@ from policy.coma import COMA
 from policy.reinforce import Reinforce
 from policy.qtran_base import QtranBase
 from policy.qtran_alt import QtranAlt
+from policy.maven import MAVEN
 
 
 # Agent no communication
@@ -47,7 +48,6 @@ class Agents:
         elif args.alg == 'qtran_base':
             self.policy = QtranBase(args)
         elif args.alg == 'maven':
-            from ..policy.maven import MAVEN
             self.policy = MAVEN(args)
         elif args.alg == 'central_v':
             from ..policy.central_v import CentralV
