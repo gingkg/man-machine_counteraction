@@ -22,6 +22,7 @@ from policy.iql import IQL
 from policy.coma import COMA
 from policy.reinforce import Reinforce
 from policy.qtran_base import QtranBase
+from policy.qtran_alt import QtranAlt
 
 
 # Agent no communication
@@ -42,7 +43,6 @@ class Agents:
         elif args.alg == 'coma':
             self.policy = COMA(args)
         elif args.alg == 'qtran_alt':
-            from ..policy.qtran_alt import QtranAlt
             self.policy = QtranAlt(args)
         elif args.alg == 'qtran_base':
             self.policy = QtranBase(args)
